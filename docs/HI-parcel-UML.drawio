@@ -1,4 +1,4 @@
-<mxfile host="www.draw.io" modified="2019-11-21T03:54:43.464Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36" etag="1dFBqkY0iX3adU5HEFW-" version="12.2.7" type="github" pages="2">
+<mxfile host="www.draw.io" modified="2019-11-21T03:57:20.251Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36" etag="jW5CSJ9dynTfSv9EsBxE" version="12.2.7" type="github" pages="2">
   <diagram id="Gin3zz9YTtRB8VcTjQMi" name="Use cases">
     <mxGraphModel dx="932" dy="559" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -14,7 +14,7 @@
           <mxGeometry x="110" y="100" width="450" height="410" as="geometry"/>
         </mxCell>
         <mxCell id="pD64362p6lKJw0IgHQMT-1" value="&lt;div&gt;COURIER MANAGEMENT SYSTEM:&amp;nbsp;&lt;/div&gt;&lt;div&gt;Government or private companies can take up the system and use it for keeping a tab on the movement of every courier and article. This system will increase transparency.&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WqLShBo1qFKrbjZZbIVV-1" vertex="1">
-          <mxGeometry x="40" y="30" width="710" height="60" as="geometry"/>
+          <mxGeometry x="40" y="30" width="520" height="60" as="geometry"/>
         </mxCell>
         <mxCell id="W36nq-j1ywvkmm1FhSia-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WqLShBo1qFKrbjZZbIVV-1" source="W36nq-j1ywvkmm1FhSia-0" target="W36nq-j1ywvkmm1FhSia-2">
           <mxGeometry relative="1" as="geometry"/>
