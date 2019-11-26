@@ -1,6 +1,7 @@
 package ca.ciccc.ak.hiparcel.model;
 
 import java.util.Date;
+import java.util.List;
 
 public class ServiceOrder {
 	
@@ -17,6 +18,10 @@ public class ServiceOrder {
 	private Courier courier;
 	
 	private State state;
+	
+	private List<Parcel> items;
+	
+	private Date ending;
 
 	/**
 	 * @return the id
@@ -114,6 +119,22 @@ public class ServiceOrder {
 	 */
 	public void setState(State state) {
 		this.state = state;
+	}
+
+	public List<Parcel> getItems() {
+		return items;
+	}
+
+	public void setItems(List<Parcel> items) {
+		this.items = items;
+	}
+
+	public Date getEnding() {
+		return ending;
+	}
+
+	public void setEnding(Date ending) {
+		this.ending = ending;
 	}
 
 }
