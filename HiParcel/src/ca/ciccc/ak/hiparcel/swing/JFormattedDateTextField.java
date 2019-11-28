@@ -24,6 +24,7 @@ public class JFormattedDateTextField extends JFormattedTextField {
 	
 	Format format = new SimpleDateFormat("MM/dd/yyyy");
 
+	// Default constructior
 	public JFormattedDateTextField() {
 		super();
 		MaskFormatter maskFormatter = null;
