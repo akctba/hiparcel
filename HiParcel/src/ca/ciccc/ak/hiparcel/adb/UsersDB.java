@@ -14,7 +14,7 @@ public class UsersDB {
 
 	// MOCK CODE. It will be changed to database access
 	private static final String[] names = { "Edgar Gray", "Randal Nichols", "Howard Waters", "Perry Cain",
-			"Felipe Rose", "Gilberto Obrien", "Cindy Sparks", "Lorena Weber", "Pam Anderson", "Jan Rios" };
+			"Felipe Rose", "Gilberto Obrien", "Cindy Sparks", "Lorena Weber", "Jerremy Anderson", "Antonio Rios" };
 
 	public List<User> allCurrentUsers() {
 		List<User> list = new ArrayList<User>();
