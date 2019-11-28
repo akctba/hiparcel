@@ -10,7 +10,7 @@ import ca.ciccc.ak.hiparcel.model.User;
  * @author alexkayser
  *
  */
-public class Users {
+public class UsersDB {
 
 	// temporary constants. It will be changed to database access
 	private static final String[] names = { "Edgar Gray", "Randal Nichols", "Howard Waters", "Perry Cain",
