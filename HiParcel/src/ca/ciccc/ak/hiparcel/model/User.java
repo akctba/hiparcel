@@ -37,6 +37,11 @@ public class User {
 		this.name = name;
 	}
 	
-	
+	/*
+	 * String representation of User
+	 */
+	public String toString() {
+		return ID + " - " + name;
+	}
 
 }
