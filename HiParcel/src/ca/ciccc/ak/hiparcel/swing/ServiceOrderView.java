@@ -15,7 +15,7 @@ import javax.swing.JPanel;
 import ca.ciccc.ak.hiparcel.adb.UsersDB;
 import ca.ciccc.ak.hiparcel.model.User;
 
-public class Application {
+public class ServiceOrderView {
 
 	private JFrame frmSenderNew;
 	private JFormattedDateTextField textField;
@@ -29,7 +29,7 @@ public class Application {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Application window = new Application();
+					ServiceOrderView window = new ServiceOrderView();
 					window.frmSenderNew.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -41,7 +41,7 @@ public class Application {
 	/**
 	 * Create the application.
 	 */
-	public Application() {
+	public ServiceOrderView() {
 		initialize();
 		loadData();
 	}
