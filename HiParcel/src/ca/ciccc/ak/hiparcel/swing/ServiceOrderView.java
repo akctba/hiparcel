@@ -6,6 +6,7 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
 
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -19,8 +20,8 @@ public class ServiceOrderView {
 
 	private JFrame frmSenderNew;
 	private JFormattedDateTextField textField;
-	JComboBox<User> cmbSender;
 	JComboBox<User> cmbRecipients;
+	JLabel lblSender;
 
 	/**
 	 * Launch the application.
@@ -92,12 +93,13 @@ public class ServiceOrderView {
 		frmSenderNew.getContentPane().add(panel_1);
 		panel_1.setLayout(new FlowLayout(FlowLayout.RIGHT, 5, 5));
 
-		JLabel lblSender = new JLabel("Sender: ");
-		lblSender.setFont(new Font("Arial Hebrew", Font.PLAIN, 16));
+		JLabel lblSenderLbl = new JLabel("Sender: ");
+		lblSenderLbl.setFont(new Font("Arial Hebrew", Font.PLAIN, 16));
+		panel_1.add(lblSenderLbl);
+		
+		lblSender = new JLabel("______");
+		lblSender.setFont(new Font("Arial Black", Font.PLAIN, 18));
 		panel_1.add(lblSender);
-
-		cmbSender = new JComboBox();
-		panel_1.add(cmbSender);
 
 		JPanel panel_2 = new JPanel();
 		panel_2.setBounds(19, 160, 761, 225);
@@ -134,14 +136,14 @@ public class ServiceOrderView {
 	private void loadData() {
 		UsersDB usersDB = new UsersDB();
 		List<User> allCurrentUsers = usersDB.allCurrentUsers();
-
-		// senders
-		if (cmbSender != null) {
-			//clean combobox items
-			cmbSender.removeAllItems();
-			//Add all current users
-			allCurrentUsers.forEach(user -> cmbSender.addItem(user));
-		}
+		
+		//Current user 
+		Random random = new Random(); //Mock code
+		User current = usersDB.loadUser(random.nextInt(10));
+		lblSender.setText(current.toString());
+		
+		//current user cannot send to yourself
+		allCurrentUsers.remove(current);
 
 		// recipients
 		if (cmbRecipients != null) {
@@ -149,7 +151,17 @@ public class ServiceOrderView {
 			cmbRecipients.removeAllItems();
 			//Add all current users
 			allCurrentUsers.forEach(user -> cmbRecipients.addItem(user));
+			
 		}
+		
+		
+		// senders
+//		if (cmbSender != null) {
+//			//clean combobox items
+//			cmbSender.removeAllItems();
+//			//Add all current users
+//			allCurrentUsers.forEach(user -> cmbSender.addItem(user));
+//		}
 
 	}
 }
