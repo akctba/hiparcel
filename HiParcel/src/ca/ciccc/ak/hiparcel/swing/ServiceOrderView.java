@@ -8,10 +8,13 @@ import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
+import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JList;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 
 import ca.ciccc.ak.hiparcel.adb.UsersDB;
 import ca.ciccc.ak.hiparcel.model.User;
@@ -96,14 +99,31 @@ public class ServiceOrderView {
 		JLabel lblSenderLbl = new JLabel("Sender: ");
 		lblSenderLbl.setFont(new Font("Arial Hebrew", Font.PLAIN, 16));
 		panel_1.add(lblSenderLbl);
-		
+
 		lblSender = new JLabel("______");
 		lblSender.setFont(new Font("Arial Black", Font.PLAIN, 18));
 		panel_1.add(lblSender);
 
 		JPanel panel_2 = new JPanel();
-		panel_2.setBounds(19, 160, 761, 225);
+		panel_2.setBounds(19, 142, 761, 243);
 		frmSenderNew.getContentPane().add(panel_2);
+
+		JList itemList = new JList();
+		// panel_2.add(itemList);
+
+		JScrollPane scrollPane = new JScrollPane(itemList, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,
+				JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+		// scrollPane.setViewportView(itemList);
+		// itemList.setLayoutOrientation(JList.VERTICAL);
+
+		panel_2.add(scrollPane);
+		
+		JButton btnAddItem = new JButton("Add Item");
+		panel_2.add(btnAddItem);
+		
+		JButton btnRemoveItem = new JButton("Remove Item");
+		btnRemoveItem.setEnabled(false);
+		panel_2.add(btnRemoveItem);
 
 		JPanel panel_3 = new JPanel();
 		panel_3.setBounds(19, 397, 761, 49);
@@ -128,6 +148,17 @@ public class ServiceOrderView {
 		JLabel lblSituation = new JLabel("________");
 		panel_3.add(lblSituation);
 
+		JPanel panel_4 = new JPanel();
+		panel_4.setBounds(362, 86, 418, 44);
+		frmSenderNew.getContentPane().add(panel_4);
+		panel_4.setLayout(new FlowLayout(FlowLayout.RIGHT, 5, 5));
+
+		JButton btnNewSo = new JButton("New SO");
+		panel_4.add(btnNewSo);
+
+		JButton btnSave = new JButton("Save");
+		panel_4.add(btnSave);
+
 	}
 
 	/**
@@ -136,25 +167,24 @@ public class ServiceOrderView {
 	private void loadData() {
 		UsersDB usersDB = new UsersDB();
 		List<User> allCurrentUsers = usersDB.allCurrentUsers();
-		
-		//Current user 
-		Random random = new Random(); //Mock code
+
+		// Current user
+		Random random = new Random(); // Mock code
 		User current = usersDB.loadUser(random.nextInt(10));
 		lblSender.setText(current.toString());
-		
-		//current user cannot send to yourself
+
+		// current user cannot send to yourself
 		allCurrentUsers.remove(current);
 
 		// recipients
 		if (cmbRecipients != null) {
-			//clean combobox items
+			// clean combobox items
 			cmbRecipients.removeAllItems();
-			//Add all current users
+			// Add all current users
 			allCurrentUsers.forEach(user -> cmbRecipients.addItem(user));
-			
+
 		}
-		
-		
+
 		// senders
 //		if (cmbSender != null) {
 //			//clean combobox items
@@ -164,4 +194,5 @@ public class ServiceOrderView {
 //		}
 
 	}
+
 }
