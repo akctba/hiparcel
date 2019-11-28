@@ -166,11 +166,11 @@ public class ServiceOrderView {
 	 */
 	private void loadData() {
 		UsersDB usersDB = new UsersDB();
-		List<User> allCurrentUsers = usersDB.allCurrentUsers();
+		List<User> allCurrentUsers = usersDB.listAll();
 
 		// Current user
 		Random random = new Random(); // Mock code
-		User current = usersDB.loadUser(random.nextInt(10));
+		User current = usersDB.selectById(random.nextInt(10));
 		lblSender.setText(current.toString());
 
 		// current user cannot send to yourself
@@ -185,13 +185,6 @@ public class ServiceOrderView {
 
 		}
 
-		// senders
-//		if (cmbSender != null) {
-//			//clean combobox items
-//			cmbSender.removeAllItems();
-//			//Add all current users
-//			allCurrentUsers.forEach(user -> cmbSender.addItem(user));
-//		}
 
 	}
 
