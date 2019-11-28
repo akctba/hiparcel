@@ -11,6 +11,11 @@ import javax.swing.JFormattedTextField;
 import javax.swing.text.DefaultFormatterFactory;
 import javax.swing.text.MaskFormatter;
 
+/**
+ * Especialization of JFormattedTextField to format date
+ * @author alexkayser
+ *
+ */
 public class JFormattedDateTextField extends JFormattedTextField {
 	/**
 	 * 
