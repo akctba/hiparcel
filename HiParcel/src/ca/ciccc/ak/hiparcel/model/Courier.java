@@ -8,6 +8,17 @@ public class Courier {
 
 	private VehicleType vehicle;
 
+	public Courier() {
+		//default constructor
+	}
+	
+	public Courier(long id, String name, VehicleType vehicle) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.vehicle = vehicle;
+	}
+	
 	/**
 	 * @return the id
 	 */
