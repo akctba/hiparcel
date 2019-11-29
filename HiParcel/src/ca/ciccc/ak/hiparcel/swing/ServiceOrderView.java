@@ -18,6 +18,9 @@ import javax.swing.JScrollPane;
 
 import ca.ciccc.ak.hiparcel.adb.UsersDB;
 import ca.ciccc.ak.hiparcel.model.User;
+import javax.swing.border.TitledBorder;
+import javax.swing.border.MatteBorder;
+import java.awt.Color;
 
 public class ServiceOrderView {
 
@@ -60,7 +63,9 @@ public class ServiceOrderView {
 		frmSenderNew.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmSenderNew.getContentPane().setLayout(null);
 
+		//panel to basic information about service order
 		JPanel panel = new JPanel();
+		panel.setBorder(new TitledBorder(null, "Service Order info", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		panel.setBounds(19, 30, 282, 100);
 		frmSenderNew.getContentPane().add(panel);
 		panel.setLayout(new GridLayout(0, 2, 0, 0));
@@ -92,19 +97,17 @@ public class ServiceOrderView {
 		textField.setColumns(10);
 
 		JPanel panel_1 = new JPanel();
+		panel_1.setBorder(new TitledBorder(null, "Sender", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		panel_1.setBounds(362, 30, 418, 49);
 		frmSenderNew.getContentPane().add(panel_1);
 		panel_1.setLayout(new FlowLayout(FlowLayout.RIGHT, 5, 5));
-
-		JLabel lblSenderLbl = new JLabel("Sender: ");
-		lblSenderLbl.setFont(new Font("Arial Hebrew", Font.PLAIN, 16));
-		panel_1.add(lblSenderLbl);
 
 		lblSender = new JLabel("______");
 		lblSender.setFont(new Font("Arial Black", Font.PLAIN, 18));
 		panel_1.add(lblSender);
 
 		JPanel panel_2 = new JPanel();
+		panel_2.setBorder(new TitledBorder(null, "Items to deliver", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
 		panel_2.setBounds(19, 142, 761, 243);
 		frmSenderNew.getContentPane().add(panel_2);
 
@@ -149,7 +152,7 @@ public class ServiceOrderView {
 		panel_3.add(lblSituation);
 
 		JPanel panel_4 = new JPanel();
-		panel_4.setBounds(362, 86, 418, 44);
+		panel_4.setBounds(362, 91, 418, 39);
 		frmSenderNew.getContentPane().add(panel_4);
 		panel_4.setLayout(new FlowLayout(FlowLayout.RIGHT, 5, 5));
 

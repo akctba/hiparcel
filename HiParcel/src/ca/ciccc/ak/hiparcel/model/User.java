@@ -11,7 +11,7 @@ public class User {
 	private long ID;
 
 	private String name;
-
+	
 	public User() {
 		// default constructor
 	}
@@ -20,6 +20,7 @@ public class User {
 		super();
 		ID = iD;
 		this.name = name;
+		
 	}
 
 	public long getID() {
